@@ -6,7 +6,7 @@ $accent-color2: saturate($mid-color, 20);
 $highlight-color: lighten(saturate($mid-color, 20), 20);
 */
 body {
-  background-color: #000000;
+  background-color: #141414;
   color: #ff1a9c;
   max-width: 680px;
   margin: auto;
