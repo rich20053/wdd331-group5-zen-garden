@@ -1,13 +1,13 @@
 // SCSS File for Team 5 CSS Zen Garden Project
 
 // Variables
-@use 'variables' as *;
+@use 'variables-pattern' as *;
 
 // Atoms
-@use 'atoms';
+@use 'atoms-pattern';
 
 // Molecules
-@use 'molecules';
+@use 'molecules-pattern';
 
 // Variables
-@use 'organisms';
+@use 'organisms-pattern';
