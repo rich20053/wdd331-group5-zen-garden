@@ -1,0 +1,22 @@
+{
+  "name": "group5-zen-garden",
+  "version": "1.0.0",
+  "description": "CSS Zen Garden Project for BYU Idaho Advanced CSS",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass style.scss style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rich20053/wdd331-group5-zen-garden.git"
+  },
+  "author": "David, Cody, Mark",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rich20053/wdd331-group5-zen-garden/issues"
+  },
+  "homepage": "https://github.com/rich20053/wdd331-group5-zen-garden#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
