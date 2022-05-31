@@ -1,19 +1,133 @@
-/* Error: Undefined variable.
- *   ,
- * 5 |     color: $header-font-color;
- *   |            ^^^^^^^^^^^^^^^^^^
- *   '
- *   _atoms.scss 5:12  headers()
- *   _atoms.scss 16:5  @use
- *   style.scss 7:1    root stylesheet */
+/*
+$dark-color: black;
+$mid-color: lighten($dark-color, 20);
+$light-color: lighten($mid-color, 20);
+$accent-color2: saturate($mid-color, 20);
+$highlight-color: lighten(saturate($mid-color, 20), 20);
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
 
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a   \2577 \a 5 \2502      color: $header-font-color;\d\a   \2502             ^^^^^^^^^^^^^^^^^^\a   \2575 \a   _atoms.scss 5:12  headers()\a   _atoms.scss 16:5  @use\a   style.scss 7:1    root stylesheet";
-}
+html {
+  font-size: 62.5%; }
+
+body {
+  background-color: #000000;
+  color: #000000; }
+
+h1 {
+  color: #f3f1f4;
+  font-size: 6rem;
+  letter-spacing: 2rem; }
+
+h2 {
+  color: #f3f1f4;
+  font-size: 2rem;
+  letter-spacing: 2.03rem; }
+  h2 abbr {
+    --b: 0.1em;
+    /* the thickness of the line */
+    text-decoration: none;
+    padding-block: var(--b);
+    background: linear-gradient(#125da9 50%, #000000 0) 0% calc(100% - var(--_p,0%))/100% 200%, linear-gradient(#125da9 0 0) 0% var(--_p, 0%)/var(--_p, 0%) var(--b) no-repeat;
+    -webkit-background-clip: text,padding-box;
+    background-clip: text,padding-box;
+    transition: 0.3s var(--_s, 0s) linear, background-size 0.3s calc(.3s - var(--_s,0s)); }
+    h2 abbr:hover {
+      --_p:100%;
+      --_s: .3s;
+      color: #125da9; }
+
+a {
+  text-decoration: none;
+  color: yellow; }
+
+header {
+  height: 70vh;
+  background-image: linear-gradient(to right bottom, rgba(18, 93, 169, 0.7), rgba(77, 28, 113, 0.7)), url(https://images.pexels.com/photos/998641/pexels-photo-998641.jpeg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 83% 100%, 74% 92%, 27% 92%, 18% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 83% 100%, 74% 92%, 26% 92%, 17% 100%, 0 100%);
+  background-attachment: fixed;
+  text-transform: uppercase;
+  padding-top: 30rem; }
+
+.summary {
+  color: #f3f1f4;
+  font-size: 1.6rem;
+  margin-top: -6rem;
+  margin-bottom: 12rem; }
+
+.requirements {
+  grid-column: 1/5; }
+
+.preamble {
+  text-align: left;
+  padding: 0 20% 0 20%;
+  margin-top: -2rem; }
+  .preamble h3 {
+    font-size: 4rem;
+    color: #000000; }
+  .preamble p {
+    font-size: 1.6rem;
+    color: #000000; }
+  .preamble h3 {
+    font-size: 6rem;
+    text-align: center;
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+    color: #154388; }
+  .preamble p {
+    padding-bottom: .7rem;
+    font-size: 1.8rem;
+    color: #f3f1f4; }
+
+.explanation,
+.participation,
+.benefits,
+.requirements {
+  border: 2px solid #303038;
+  border-radius: 10px;
+  background-color: rgba(243, 241, 244, 0.2); }
+  .explanation h3,
+  .participation h3,
+  .benefits h3,
+  .requirements h3 {
+    background-color: rgba(48, 48, 56, 0.5);
+    padding: .4rem; }
+  .explanation p:not(:last-child),
+  .participation p:not(:last-child),
+  .benefits p:not(:last-child),
+  .requirements p:not(:last-child) {
+    margin-bottom: .7rem; }
+
+.intro {
+  text-align: center; }
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1.6rem;
+  row-gap: 1.6rem;
+  border-radius: .5rem;
+  background-image: linear-gradient(to right bottom, rgba(180, 130, 172, 0.8), rgba(165, 0, 1, 0.8)), url(https://wallpaperaccess.com/full/567901.jpg);
+  padding: 22rem 15% 5rem 15%;
+  margin: -20rem 5% 7% 5%; }
+  .main h3 {
+    font-size: 3.5rem;
+    color: #000000; }
+  .main p {
+    font-size: 1.6rem;
+    color: #000000; }
+
+.wrapper {
+  background-color: #303038;
+  -webkit-clip-path: polygon(35% 0, 65% 0, 75% 13%, 100% 13%, 100% 100%, 0 100%, 0 13%, 25% 13%);
+  clip-path: polygon(26% 0, 74% 0, 80% 20%, 100% 20%, 100% 100%, 0 100%, 0 20%, 20% 20%);
+  padding: 0 30% 5rem 30%; }
