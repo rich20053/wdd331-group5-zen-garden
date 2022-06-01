@@ -4,11 +4,14 @@ $header-font: Georgia, serif;
 $body-font: Verdana, Arial, sans-serif;
 
 // Font Size
-$h1-size: 36px;
-$h2-size: 18px;
-$h3-size: 15px;
-$h4-size: 15px;
-$p-size: 15px;
+$large-title: 6rem;
+$medium-title: 3.5rem;
+$small-title: 2rem;
+$paragraph-large: 1.8rem;
+$paragraph-regular: 1.6rem;
+
+// Grid
+
 
 // Colors
 $background-color: #000000;
@@ -17,6 +20,17 @@ $header-font-color: yellow;
 $highlight-color: #7d1aff;
 $accent-color: #ff1a9c;
 $accent-color2: #ffffff;
+
+$color-blue: #125da9;
+$color-blue-dark: #154388;
+$color-purple: #4d1c71;
+$color-pink: #b482ac;
+$color-gray: #303038;
+$color-red: #B70201;
+$color-red-dark: #a50001;
+$color-yellow: #d7b22f;
+$color-white: #f3f1f4;
+$color-black: #000000;
 /*
 $dark-color: black;
 $mid-color: lighten($dark-color, 20);
