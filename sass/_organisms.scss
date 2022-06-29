@@ -1,6 +1,8 @@
 .page-wrapper {
    display: grid;
    grid-template-columns: 1fr;
+   grid-column: 1fr;
+   grid-row: auto auto auto;
 }
 
 .intro {
@@ -40,9 +42,6 @@
         color: $color-black;
     }
 }
-
-
-
     .wrapper {
         background-color: $color-gray;
         -webkit-clip-path: polygon(35% 0, 65% 0, 75% 13%, 100% 13%, 100% 100%, 0 100%, 0 13%, 25% 13%);

@@ -20,6 +20,7 @@ html {
 body {
   background-color: #000000;
   color: #000000;
+  display: grid;
 }
 
 h1 {
@@ -135,9 +136,23 @@ header {
   grid-row: 1/2;
   width: 150px;
   height: 150px;
+  border: 2px solid lime;
+  padding: 5% 5%;
+  color: gold;
+  font-size: 1.6rem;
+  justify-self: right;
+  align-self: top;
+}
+
+.extra1 {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  width: 25px;
+  height: 25px;
   background-image: url("images/moonforsummary.jpg");
   background-position: center center;
   position: absolute;
+  box-shadow: 5px 5px black;
   border-radius: 50%;
   padding: 5% 5%;
   color: gold;
@@ -216,6 +231,8 @@ header {
 .page-wrapper {
   display: grid;
   grid-template-columns: 1fr;
+  grid-column: 1fr;
+  grid-row: auto auto auto;
 }
 
 .intro {
