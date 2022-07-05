@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Orbitron&display=swap");
 /*
 $dark-color: black;
 $mid-color: lighten($dark-color, 20);
@@ -20,7 +21,6 @@ html {
 body {
   background-color: #000000;
   color: #000000;
-  display: grid;
 }
 
 h1 {
@@ -39,7 +39,7 @@ h2 abbr {
   /* the thickness of the line */
   text-decoration: none;
   padding-block: var(--b);
-  background: linear-gradient(#125da9 50%, #000000 0) 0% calc(100% - var(--_p, 0%))/100% 200%, linear-gradient(#125da9 0 0) 0% var(--_p, 0%)/var(--_p, 0%) var(--b) no-repeat;
+  background: linear-gradient(#d7b22f 50%, #000000 0) 0% calc(100% - var(--_p, 0%))/100% 200%, linear-gradient(#d7b22f 0 0) 0% var(--_p, 0%)/var(--_p, 0%) var(--b) no-repeat;
   -webkit-background-clip: text, padding-box;
   background-clip: text, padding-box;
   transition: 0.3s var(--_s, 0s) linear, background-size 0.3s calc(0.3s - var(--_s, 0s));
@@ -47,7 +47,7 @@ h2 abbr {
 h2 abbr:hover {
   --_p:100%;
   --_s: .3s;
-  color: #125da9;
+  color: #d7b22f;
 }
 
 a {
@@ -55,118 +55,42 @@ a {
   color: yellow;
 }
 
+.extra2 {
+  background-image: url(..//images/shuttle.png);
+  height: 95rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  background-position: center center;
+}
+
 header {
-  height: 40vh;
-  grid-column: 1/2;
-  grid-row: 1/2;
+  height: 70vh;
+  background-image: linear-gradient(to right bottom, rgba(18, 93, 169, 0.7), rgba(77, 28, 113, 0.7)), url(../images/bg-space-1.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  background-attachment: fixed;
   text-transform: uppercase;
   padding-top: 30rem;
-  z-index: 5;
+}
+header h1 {
+  animation: growbig 2s ease-in;
+}
+header h2 {
+  animation: growsmall 2s ease-in;
 }
 
-@keyframes orbit {
-  0% {
-    transform: translate(190%, 0%);
-  }
-  5% {
-    transform: translate(235%, 3%);
-  }
-  10% {
-    z-index: 10;
-    transform: translate(259%, 9%);
-  }
-  15% {
-    transform: translate(271%, 21%);
-  }
-  20% {
-    transform: translate(277%, 45%);
-  }
-  25% {
-    transform: translate(280%, 90%);
-  }
-  30% {
-    transform: translate(277%, 135%);
-  }
-  35% {
-    transform: translate(271%, 159%);
-  }
-  40% {
-    transform: translate(259%, 171%);
-  }
-  45% {
-    transform: translate(235%, 177%);
-  }
-  50% {
-    transform: translate(190%, 180%);
-  }
-  55% {
-    transform: translate(145%, 177%);
-  }
-  60% {
-    transform: translate(121%, 171%);
-  }
-  65% {
-    transform: translate(109%, 159%);
-  }
-  70% {
-    transform: translate(103%, 135%);
-  }
-  75% {
-    z-index: 0;
-    transform: translate(100%, 90%);
-  }
-  80% {
-    transform: translate(103%, 45%);
-  }
-  85% {
-    transform: translate(109%, 21%);
-  }
-  90% {
-    transform: translate(121%, 9%);
-  }
-  95% {
-    transform: translate(145%, 3%);
-  }
-  100% {
-    transform: translate(190%, 0%);
-  }
-}
 .summary {
-  grid-column: 1/2;
-  grid-row: 1/2;
-  width: 150px;
-  height: 150px;
-  border: 2px solid lime;
-  padding: 5% 5%;
-  color: gold;
+  color: #f3f1f4;
   font-size: 1.6rem;
-  justify-self: right;
-  align-self: top;
-}
-
-.extra1 {
-  grid-column: 1/2;
-  grid-row: 1/2;
-  width: 25px;
-  height: 25px;
-  background-image: url("images/moonforsummary.jpg");
-  background-position: center center;
+  margin-bottom: 12rem;
   position: absolute;
-  box-shadow: 5px 5px black;
-  border-radius: 50%;
-  padding: 5% 5%;
-  color: gold;
-  font-size: 1.6rem;
-  animation-name: orbit;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-
-.summary:hover {
-  animation-play-state: paused;
-  border: 2px solid lime;
-  color: lime;
+  top: 120%;
+  left: 75%;
+  width: 40rem;
 }
 
 .requirements {
@@ -174,9 +98,12 @@ header {
 }
 
 .preamble {
+  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.5), rgba(215, 178, 47, 0.2)), url(../images/bg-space-plain.jpg);
+  height: 100vh;
+  background-size: contain;
   text-align: left;
-  padding: 0 20% 0 20%;
-  margin-top: -2rem;
+  background-attachment: fixed;
+  z-index: -1;
 }
 .preamble h3 {
   font-size: 4rem;
@@ -187,38 +114,33 @@ header {
   color: #000000;
 }
 .preamble h3 {
-  font-size: 6rem;
-  text-align: center;
-  padding-bottom: 1rem;
+  font-size: 3rem;
+  text-align: left;
+  padding: 4rem 5rem 0 2rem;
   text-transform: uppercase;
   color: #154388;
 }
 .preamble p {
-  padding-bottom: 0.7rem;
+  padding: 4rem 5rem 0 2rem;
   font-size: 1.8rem;
   color: #f3f1f4;
+  margin-right: 60%;
 }
 
 .explanation,
 .participation,
 .benefits,
 .requirements {
-  z-index: 10;
-  border: 2px solid #303038;
-  border-radius: 10px;
-  background-color: rgba(243, 241, 244, 0.2);
-}
-.explanation p,
-.participation p,
-.benefits p,
-.requirements p {
-  padding: 20px;
+  border-radius: 0.8rem;
+  box-shadow: inset 0 0 0 200px rgba(255, 255, 255, 0.15);
+  padding: 1rem;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
 }
 .explanation h3,
 .participation h3,
 .benefits h3,
 .requirements h3 {
-  background-color: rgba(48, 48, 56, 0.5);
   padding: 0.4rem;
 }
 .explanation p:not(:last-child),
@@ -228,37 +150,33 @@ header {
   margin-bottom: 0.7rem;
 }
 
-.page-wrapper {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-column: 1fr;
-  grid-row: auto auto auto;
+@keyframes growbig {
+  0% {
+    font-size: 10%;
+  }
+  10% {
+    font-size: 100%;
+  }
 }
-
+@keyframes growsmall {
+  0% {
+    opacity: 0.01;
+  }
+}
 .intro {
-  grid-column: 1/2;
-  grid-row: 1/2;
   text-align: center;
-  background-image: linear-gradient(to right bottom, rgba(18, 93, 169, 0.7), rgba(77, 28, 113, 0.7)), url(https://images.pexels.com/photos/998641/pexels-photo-998641.jpeg);
-  background-size: cover;
-  background-position: top;
-  position: relative;
-  background-attachment: fixed;
-  display: grid;
-  grid-template-columns: auto;
 }
 
 .main {
-  grid-column: 1fr;
-  grid-row: 2/4;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 1.6rem;
   row-gap: 1.6rem;
   border-radius: 0.5rem;
-  background-image: linear-gradient(to right bottom, rgba(180, 130, 172, 0.8), rgba(165, 0, 1, 0.8)), url(https://wallpaperaccess.com/full/567901.jpg);
+  background-image: linear-gradient(to right bottom, rgba(180, 130, 172, 0.6), rgba(165, 0, 1, 0.5)), url(../images/bg-planet-2.jpg);
+  background-size: 100%;
+  background-attachment: fixed;
   padding: 22rem 15% 5rem 15%;
-  margin: -20rem 5% 7% 5%;
 }
 .main h3 {
   font-size: 3.5rem;
@@ -274,24 +192,16 @@ header {
   -webkit-clip-path: polygon(35% 0, 65% 0, 75% 13%, 100% 13%, 100% 100%, 0 100%, 0 13%, 25% 13%);
   clip-path: polygon(26% 0, 74% 0, 80% 20%, 100% 20%, 100% 100%, 0 100%, 0 20%, 20% 20%);
   padding: 0 30% 5rem 30%;
-  display: grid;
-  grid-template-columns: 65% 35%;
 }
 
 footer {
-  grid-column: span 3;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.design-selection {
-  grid-row: span 2;
-}
-
-.sidebar h3 {
-  color: lime;
-  padding: 5px 0;
+  grid-column: 1/span 6;
+  height: 5rem;
+  width: 100vh;
+  font-size: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+  background-color: #303038;
 }
 
 /*# sourceMappingURL=style.css.map */
