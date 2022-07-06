@@ -39,3 +39,13 @@
         color: $color-black;
     }
 }
+
+@mixin background-text($first-color, $second-color) {
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(
+      to right,
+      rgba($first-color, 0.85),
+      rgba($second-color, 0.85)
+    );
+  }

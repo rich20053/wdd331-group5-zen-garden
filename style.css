@@ -56,25 +56,54 @@ a {
 }
 
 .extra2 {
-  background-image: url(..//images/shuttle.png);
-  height: 95rem;
+  content: "X";
+  width: 30%;
+  background-image: url(../images/shuttle.png);
+  height: 95%;
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
-  top: 20%;
-  left: 50%;
+  top: 103%;
+  left: 35%;
   background-position: center center;
+  z-index: 10;
+}
+
+.extra3 {
+  background-image: url(..//images/blue-planet.png);
+  background-size: contain;
+  position: fixed;
+  width: 30rem;
+  height: 30rem;
+  top: 15%;
+  left: 10%;
+  z-index: 2;
+}
+
+.extra4 {
+  background-image: url(..//images/brown-moon.png);
+  background-size: contain;
+  position: absolute;
+  width: 20rem;
+  height: 20rem;
+  top: 5%;
+  left: 85%;
+  z-index: 10;
 }
 
 header {
-  height: 70vh;
+  height: 100vh;
   background-image: linear-gradient(to right bottom, rgba(18, 93, 169, 0.7), rgba(77, 28, 113, 0.7)), url(../images/bg-space-1.jpg);
   background-size: cover;
   background-position: top;
   position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 51% 84%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 51% 84%, 0 100%);
   background-attachment: fixed;
   text-transform: uppercase;
   padding-top: 30rem;
+  text-align: center;
+  z-index: 4;
 }
 header h1 {
   animation: growbig 2s ease-in;
@@ -84,70 +113,113 @@ header h2 {
 }
 
 .summary {
-  color: #f3f1f4;
   font-size: 1.6rem;
-  margin-bottom: 12rem;
+  background-image: url(../images/bg-space-plain.jpg);
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  background-attachment: fixed;
+  margin-top: -20rem;
+  z-index: 1;
+}
+.summary p:not(:last-child) {
+  background-image: url(../images/brown-moon.png);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: fixed;
+  padding: 10rem 5rem 10rem 5rem;
+  top: 10%;
+  left: 68%;
+  width: 25rem;
+  height: 25rem;
+  text-align: center;
+  transition: all 0.3s;
+}
+.summary p:not(:last-child):not(:hover) {
+  transform: scale(0.25);
+}
+.summary p:not(:last-child):hover {
+  transform: scale(1.1);
+}
+.summary p:last-child {
+  color: #f3f1f4;
   position: absolute;
-  top: 120%;
-  left: 75%;
-  width: 40rem;
+  top: 87%;
+  left: 43%;
 }
 
 .requirements {
-  grid-column: 1/5;
+  grid-column: 1/span 3;
 }
 
-.preamble {
-  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.5), rgba(215, 178, 47, 0.2)), url(../images/bg-space-plain.jpg);
-  height: 100vh;
-  background-size: contain;
-  text-align: left;
-  background-attachment: fixed;
-  z-index: -1;
-}
-.preamble h3 {
-  font-size: 4rem;
-  color: #000000;
-}
-.preamble p {
-  font-size: 1.6rem;
-  color: #000000;
-}
-.preamble h3 {
-  font-size: 3rem;
-  text-align: left;
-  padding: 4rem 5rem 0 2rem;
-  text-transform: uppercase;
-  color: #154388;
-}
-.preamble p {
-  padding: 4rem 5rem 0 2rem;
-  font-size: 1.8rem;
-  color: #f3f1f4;
-  margin-right: 60%;
-}
-
+.preamble,
 .explanation,
 .participation,
 .benefits,
-.requirements {
+.requirements,
+footer {
   border-radius: 0.8rem;
   box-shadow: inset 0 0 0 200px rgba(255, 255, 255, 0.15);
   padding: 1rem;
   -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
 }
+.preamble h3,
 .explanation h3,
 .participation h3,
 .benefits h3,
-.requirements h3 {
+.requirements h3,
+footer h3 {
   padding: 0.4rem;
+  font-size: 3rem;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, rgba(77, 28, 113, 0.85), rgba(18, 93, 169, 0.85));
 }
+.preamble p,
+.explanation p,
+.participation p,
+.benefits p,
+.requirements p,
+footer p {
+  font-size: 1.6rem;
+  color: #000000;
+  text-align: justify;
+}
+.preamble p:not(:last-child),
 .explanation p:not(:last-child),
 .participation p:not(:last-child),
 .benefits p:not(:last-child),
-.requirements p:not(:last-child) {
+.requirements p:not(:last-child),
+footer p:not(:last-child) {
   margin-bottom: 0.7rem;
+}
+
+.preamble {
+  margin: 0 15% 0 15%;
+  position: absolute;
+  border-radius: 0 0 0.8rem 0.8rem;
+  z-index: 5;
+}
+
+footer {
+  grid-column: 1/span 3;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+  text-align: center;
+  border-radius: 0.8rem 0.8rem 0 0;
+  margin-top: 5rem;
+}
+footer a {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #f3f1f4;
+}
+footer a:hover {
+  text-decoration: underline;
 }
 
 @keyframes growbig {
@@ -163,8 +235,8 @@ header h2 {
     opacity: 0.01;
   }
 }
-.intro {
-  text-align: center;
+.design-selection {
+  margin: 0 auto;
 }
 
 .main {
@@ -176,32 +248,50 @@ header h2 {
   background-image: linear-gradient(to right bottom, rgba(180, 130, 172, 0.6), rgba(165, 0, 1, 0.5)), url(../images/bg-planet-2.jpg);
   background-size: 100%;
   background-attachment: fixed;
-  padding: 22rem 15% 5rem 15%;
-}
-.main h3 {
-  font-size: 3.5rem;
-  color: #000000;
-}
-.main p {
-  font-size: 1.6rem;
-  color: #000000;
+  padding: 22rem 15% 0 15%;
+  position: relative;
+  z-index: 4;
 }
 
 .wrapper {
-  background-color: #303038;
-  -webkit-clip-path: polygon(35% 0, 65% 0, 75% 13%, 100% 13%, 100% 100%, 0 100%, 0 13%, 25% 13%);
-  clip-path: polygon(26% 0, 74% 0, 80% 20%, 100% 20%, 100% 100%, 0 100%, 0 20%, 20% 20%);
-  padding: 0 30% 5rem 30%;
+  margin: 8rem 10rem 0 0;
+  text-align: left;
 }
 
-footer {
-  grid-column: 1/span 6;
-  height: 5rem;
-  width: 100vh;
-  font-size: 2rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
-  background-color: #303038;
+.sidebar {
+  background-image: url(../images/desert-planet.png);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 45rem;
+  height: 45rem;
+  text-align: center;
+  position: fixed;
+  z-index: 3;
+  top: 40%;
+  left: 70%;
+  list-style-type: none;
+}
+.sidebar .wrapper {
+  background-color: rgba(0, 0, 0, 0.2);
+  margin: 8rem 10rem;
+  text-align: left;
+}
+.sidebar .wrapper .zen-resources {
+  position: fixed;
+  top: 25%;
+  left: 14%;
+}
+.sidebar h3 {
+  font-size: 2.5rem;
+}
+.sidebar ul {
+  list-style: none;
+  color: #f3f1f4;
+  font-size: 1.6rem;
+}
+.sidebar a {
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
