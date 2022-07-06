@@ -12,6 +12,21 @@
      padding: 22rem 15% 0 15%;
      position: relative;
      z-index: 4;
+     @include responsive (tab-land) {
+        background-size: cover;
+        background-position: bottom;
+        position: relative;
+        grid-template-columns: 1fr 1fr;
+        // padding: 5rem 0 0 0;
+     }
+     @include responsive (tab-port) {
+        grid-template-columns: 1fr;
+        column-gap: 0;
+        padding-top: 28rem;
+     }
+     @include responsive (phone) {
+        padding-top: 45rem;
+     }
      }
 
      .wrapper {
@@ -32,6 +47,17 @@
         top: 40%;
         left: 70%;
         list-style-type: none;
+        @include responsive(tab-land) {
+            left: 55%;
+        }
+        @include responsive(tab-port) {
+            top: 50%;
+            left: 30%;
+        }
+        @include responsive(phone) {
+            top: 50%;
+            left: -5%;
+        }
         & .wrapper {
             background-color: rgba($color-black, 0.2);
             margin: 8rem 10rem;
@@ -40,6 +66,10 @@
                 position: fixed;
                 top: 25%;
                 left: 14%;
+                @include responsive(tab-land) {
+                    top: 8%;
+                    left: 19%;
+                }
             }
          }
          & h3 {

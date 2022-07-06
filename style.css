@@ -68,6 +68,23 @@ a {
   background-position: center center;
   z-index: 10;
 }
+@media only screen and (max-width: 75em) {
+  .extra2 {
+    top: 95%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .extra2 {
+    top: 105%;
+    height: 50%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .extra2 {
+    top: 110%;
+    height: 25%;
+  }
+}
 
 .extra3 {
   background-image: url(..//images/blue-planet.png);
@@ -78,6 +95,11 @@ a {
   top: 15%;
   left: 10%;
   z-index: 2;
+}
+@media only screen and (max-width: 56.25em) {
+  .extra3 {
+    top: 2%;
+  }
 }
 
 .extra4 {
@@ -138,17 +160,67 @@ header h2 {
   text-align: center;
   transition: all 0.3s;
 }
+@media only screen and (max-width: 75em) {
+  .summary p:not(:last-child) {
+    left: 50%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .summary p:not(:last-child) {
+    top: 28%;
+    left: 5%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .summary p:not(:last-child) {
+    top: 22%;
+    left: 3%;
+  }
+}
 .summary p:not(:last-child):not(:hover) {
   transform: scale(0.25);
 }
 .summary p:not(:last-child):hover {
   transform: scale(1.1);
 }
+@media only screen and (max-width: 37.5em) {
+  .summary p:not(:last-child):hover {
+    transform: translateY(5rem);
+  }
+}
 .summary p:last-child {
   color: #f3f1f4;
   position: absolute;
   top: 87%;
   left: 43%;
+}
+@media only screen and (max-width: 75em) {
+  .summary p:last-child {
+    top: 59%;
+    left: 39%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .summary p:last-child {
+    top: 35%;
+    left: 31%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .summary p:last-child {
+    top: 22%;
+    left: 13%;
+  }
+}
+@media only screen and (max-width: 75em) {
+  .summary {
+    padding-bottom: 30rem;
+  }
+}
+@media only screen and (max-width: 75em) {
+  .summary {
+    padding-bottom: 40rem;
+  }
 }
 
 .requirements {
@@ -222,6 +294,21 @@ footer a:hover {
   text-decoration: underline;
 }
 
+@media only screen and (max-width: 75em) {
+  .benefits {
+    grid-column: 1/span 3;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .explanation,
+.participation,
+.benefits,
+.requirements {
+    grid-column: 1;
+  }
+}
+
 @keyframes growbig {
   0% {
     font-size: 10%;
@@ -252,6 +339,26 @@ footer a:hover {
   position: relative;
   z-index: 4;
 }
+@media only screen and (max-width: 75em) {
+  .main {
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .main {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    padding-top: 28rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .main {
+    padding-top: 45rem;
+  }
+}
 
 .wrapper {
   margin: 8rem 10rem 0 0;
@@ -272,6 +379,23 @@ footer a:hover {
   left: 70%;
   list-style-type: none;
 }
+@media only screen and (max-width: 75em) {
+  .sidebar {
+    left: 55%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .sidebar {
+    top: 50%;
+    left: 30%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .sidebar {
+    top: 50%;
+    left: -5%;
+  }
+}
 .sidebar .wrapper {
   background-color: rgba(0, 0, 0, 0.2);
   margin: 8rem 10rem;
@@ -281,6 +405,12 @@ footer a:hover {
   position: fixed;
   top: 25%;
   left: 14%;
+}
+@media only screen and (max-width: 75em) {
+  .sidebar .wrapper .zen-resources {
+    top: 8%;
+    left: 19%;
+  }
 }
 .sidebar h3 {
   font-size: 2.5rem;

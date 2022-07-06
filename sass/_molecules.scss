@@ -48,11 +48,25 @@ header {
         height: 25rem;
         text-align: center;
         transition: all .3s;
+        @include responsive(tab-land) {
+            left: 50%;
+        }
+        @include responsive(tab-port) {
+            top: 28%;
+            left: 5%;
+        }
+        @include responsive(phone) {
+            top: 22%;
+            left: 3%;
+        }
         &:not(:hover) {
             transform: scale(.25);
         }
         &:hover {
             transform: scale(1.1);
+            @include responsive(phone) {
+                transform: translateY(5rem);
+            }
         }
     }
     & p:last-child {
@@ -60,11 +74,29 @@ header {
         position: absolute;
         top: 87%;
         left: 43%;
+        @include responsive(tab-land) {
+            top: 59%;
+            left: 39%;
+        }
+        @include responsive(tab-port) {
+            top: 35%;
+            left: 31%;
+        }
+        @include responsive(phone) {
+            top: 22%;
+            left: 13%;
+        }
+    }
+    @include responsive(tab-land) {
+        padding-bottom: 30rem;
+    }
+    @include responsive(tab-land) {
+        padding-bottom: 40rem;
     }
 }
 
 .requirements {
-    grid-column: 1/span 3;
+    grid-column: 1 /span 3;
 }
 
 
@@ -119,6 +151,23 @@ footer {
         }
     }
 }
+
+.benefits {
+    @include responsive(tab-land) {
+        grid-column: 1 / span 3;
+    }
+}
+
+.explanation,
+.participation,
+.benefits,
+.requirements {
+    @include responsive(tab-port) {
+        grid-column: 1;
+    }
+}
+
+
 
 @keyframes growbig {
     0% {
