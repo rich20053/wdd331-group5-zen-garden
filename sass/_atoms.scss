@@ -25,7 +25,6 @@ html {
 body {
     background-color: $background-color;
     color: $color-black;
-    display: grid;
 }
 
 h1 {
@@ -44,8 +43,8 @@ h2 {
     text-decoration: none;
     padding-block: var(--b);
     background: 
-    linear-gradient($color-blue 50%,$color-black 0) 0% calc(100% - var(--_p,0%))/100% 200%,
-    linear-gradient($color-blue 0 0) 0% var(--_p,0%)/var(--_p,0%) var(--b) no-repeat;
+    linear-gradient($color-yellow 50%,$color-black 0) 0% calc(100% - var(--_p,0%))/100% 200%,
+    linear-gradient($color-yellow 0 0) 0% var(--_p,0%)/var(--_p,0%) var(--b) no-repeat;
     -webkit-background-clip: text,padding-box;
     background-clip: text,padding-box;
     transition: .3s var(--_s,0s) linear,background-size .3s calc(.3s - var(--_s,0s));
@@ -53,7 +52,7 @@ h2 {
     &:hover {
         --_p:100%;
         --_s: .3s;
-        color: $color-blue;
+        color: $color-yellow;
     }
 }
 }
@@ -61,4 +60,40 @@ h2 {
 a {
     text-decoration: none;
     color: yellow;
+}
+
+.extra2 {
+    content: "X";
+    width: 30%;
+    background-image: url(../images/shuttle.png);
+    height: 95%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 103%;
+    left: 35%;
+    background-position: center center;
+    z-index: 10;
+}
+
+.extra3 {
+    background-image: url(..//images/blue-planet.png);
+    background-size: contain;
+    position: fixed;
+    width: 30rem;
+    height: 30rem;
+    top: 15%;
+    left: 10%;
+    z-index: 2;
+}
+
+.extra4 {
+    background-image: url(..//images/brown-moon.png);
+    background-size: contain;
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
+    top: 5%;
+    left: 85%;
+    z-index: 10;
 }

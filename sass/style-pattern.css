@@ -1,0 +1,18 @@
+/* Error: Undefined variable.
+ *    ,
+ * 25 |     font-size: $h1-size;
+ *    |                ^^^^^^^^
+ *    '
+ *   sass\_atoms-pattern.scss 25:16  @use
+ *   sass\style-pattern.scss 7:1     root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a    \2577 \a 25 \2502      font-size: $h1-size;\d\a    \2502                 ^^^^^^^^\a    \2575 \a   sass\\_atoms-pattern.scss 25:16  @use\a   sass\\style-pattern.scss 7:1     root stylesheet";
+}
