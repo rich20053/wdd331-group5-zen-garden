@@ -17,7 +17,6 @@
         background-position: bottom;
         position: relative;
         grid-template-columns: 1fr 1fr;
-        // padding: 5rem 0 0 0;
      }
      @include responsive (tab-port) {
         grid-template-columns: 1fr;
@@ -30,48 +29,40 @@
      }
 
      .wrapper {
-        margin: 8rem 10rem 0 0;
-        text-align: left;
-     }
-
-     .sidebar {
-         background-image: url(../images/desert-planet.png);
+         background-image: radial-gradient(
+            ellipse at center,
+            rgba($color-black, .2) 0%,
+            rgba($color-black, .3) 70%,
+            rgba(0, 128, 172, 0) 70.3%
+          ), url(../images/desert-planet.png);
          background-size: contain;
          background-position: center center;
          background-repeat: no-repeat;
          width: 45rem;
          height: 45rem;
-         text-align: center;
         position: fixed;
         z-index: 3;
         top: 40%;
         left: 70%;
         list-style-type: none;
-        @include responsive(tab-land) {
-            left: 55%;
-        }
-        @include responsive(tab-port) {
-            top: 50%;
-            left: 30%;
-        }
-        @include responsive(phone) {
-            top: 50%;
-            left: -5%;
-        }
-        & .wrapper {
-            background-color: rgba($color-black, 0.2);
-            margin: 8rem 10rem;
             text-align: left;
+            padding: 13rem 0 0 13rem;
             & .zen-resources {
                 position: fixed;
                 top: 25%;
                 left: 14%;
+                & h3 {
+                  color: yellow;
+                }
                 @include responsive(tab-land) {
                     top: 8%;
                     left: 19%;
                 }
+                @include responsive(phone) {
+                  top: 10%;
+                  left: 30%;
+              }
             }
-         }
          & h3 {
             font-size: 2.5rem;
          }
@@ -82,5 +73,28 @@
          }
          & a {
             color: white;
+            &:hover {
+               color: $color-blue;
+            }
          }
+         @include responsive(tab-land) {
+            left: 55%;
+        }
+        @include responsive(tab-port) {
+            top: 50%;
+            left: 30%;
+        }
+        &:not(:last-child){
+        @include responsive(phone) {
+            top: 30%;
+            left: -15%;
+            transition: all 1s;
+        &:not(:hover) {
+            transform: scale(.25);
+        }
+        &:hover {
+            transform: scale(1.1);
+        }
+        }
+      }
      }
