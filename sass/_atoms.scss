@@ -25,18 +25,25 @@ html {
 body {
     background-color: $background-color;
     color: $color-black;
+    font-family: $body-font;
+}
+
+p {
+    letter-spacing: .2rem;
 }
 
 h1 {
     color: $color-white;
     font-size: $large-title;
     letter-spacing: 2rem;
+    font-family: $header-font;
 }
 
 h2 {
     color: $color-white;
     font-size: 2rem;
     letter-spacing: 2.03rem;
+    font-family: $header-font;
     & abbr{
     --b: 0.1em;   /* the thickness of the line */
 
@@ -74,10 +81,26 @@ a {
     left: 35%;
     background-position: center center;
     z-index: 10;
+    @include responsive(tab-land) {
+        top: 95%;
+    }
+    @include responsive(tab-port) {
+        top: 105%;
+        height: 50%;
+    }
+    @include responsive(phone) {
+        top: 110%;
+        height: 25%;
+    }
 }
 
 .extra3 {
-    background-image: url(..//images/blue-planet.png);
+    background-image: radial-gradient(
+        ellipse at center,
+        rgba($color-pink, .3) 0%,
+        rgba($color-red-dark, .3) 70%,
+        rgba(0, 128, 172, 0) 70.3%
+      ),url(..//images/blue-planet.png);
     background-size: contain;
     position: fixed;
     width: 30rem;
@@ -85,15 +108,11 @@ a {
     top: 15%;
     left: 10%;
     z-index: 2;
-}
-
-.extra4 {
-    background-image: url(..//images/brown-moon.png);
-    background-size: contain;
-    position: absolute;
-    width: 20rem;
-    height: 20rem;
-    top: 5%;
-    left: 85%;
-    z-index: 10;
+    @include responsive(tab-port) {
+        top: 2%;
+    }
+    @include responsive(phone) {
+        top: -3%;
+        transform: scale(.75);
+    }
 }
