@@ -59,7 +59,8 @@ h2 abbr:hover {
 
 a {
   text-decoration: none;
-  color: yellow;
+  color: #B70201;
+  font-weight: bold;
 }
 
 .extra2 {
@@ -75,18 +76,18 @@ a {
   background-position: center center;
   z-index: 10;
 }
-@media only screen and (max-width: 75em) {
+@media only screen and (max-width: 1200px) {
   .extra2 {
     top: 95%;
   }
 }
-@media only screen and (max-width: 56.25em) {
+@media only screen and (max-width: 900px) {
   .extra2 {
     top: 105%;
     height: 50%;
   }
 }
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 550px) {
   .extra2 {
     top: 110%;
     height: 25%;
@@ -103,12 +104,12 @@ a {
   left: 10%;
   z-index: 2;
 }
-@media only screen and (max-width: 56.25em) {
+@media only screen and (max-width: 900px) {
   .extra3 {
     top: 2%;
   }
 }
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 550px) {
   .extra3 {
     top: -3%;
     transform: scale(0.75);
@@ -132,7 +133,7 @@ header {
 header h1 {
   animation: growbig 2s ease-in;
 }
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 550px) {
   header h1 {
     font-size: 3rem;
     animation: growsmall 2s ease-in;
@@ -141,7 +142,7 @@ header h1 {
 header h2 {
   animation: growsmall 2s ease-in;
 }
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 550px) {
   header h2 {
     font-size: 2rem;
   }
@@ -173,18 +174,18 @@ header h2 {
   text-align: center;
   transition: all 0.3s;
 }
-@media only screen and (max-width: 75em) {
+@media only screen and (max-width: 1200px) {
   .summary p:not(:last-child) {
     left: 50%;
   }
 }
-@media only screen and (max-width: 56.25em) {
+@media only screen and (max-width: 900px) {
   .summary p:not(:last-child) {
     top: 28%;
     left: 5%;
   }
 }
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 550px) {
   .summary p:not(:last-child) {
     top: 15%;
     left: 3%;
@@ -196,7 +197,7 @@ header h2 {
 .summary p:not(:last-child):hover {
   transform: scale(1.1);
 }
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 550px) {
   .summary p:not(:last-child):hover {
     transform: translateY(5rem);
   }
@@ -207,30 +208,30 @@ header h2 {
   top: 87%;
   left: 43%;
 }
-@media only screen and (max-width: 75em) {
+@media only screen and (max-width: 1200px) {
   .summary p:last-child {
     top: 59%;
     left: 39%;
   }
 }
-@media only screen and (max-width: 56.25em) {
+@media only screen and (max-width: 900px) {
   .summary p:last-child {
     top: 35%;
     left: 31%;
   }
 }
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 550px) {
   .summary p:last-child {
     top: 22%;
     left: 13%;
   }
 }
-@media only screen and (max-width: 75em) {
+@media only screen and (max-width: 1200px) {
   .summary {
     padding-bottom: 30rem;
   }
 }
-@media only screen and (max-width: 75em) {
+@media only screen and (max-width: 1200px) {
   .summary {
     padding-bottom: 40rem;
   }
@@ -284,7 +285,7 @@ footer p:not(:last-child) {
 }
 
 .preamble {
-  margin: 0 15% 0 15%;
+  margin: 0 15% 50px 15%;
   position: absolute;
   border-radius: 0 0 0.8rem 0.8rem;
   z-index: 5;
@@ -301,19 +302,19 @@ footer {
 footer a {
   font-size: 2.2rem;
   font-weight: 700;
-  color: #f3f1f4;
+  color: #B70201;
 }
 footer a:hover {
   text-decoration: underline;
 }
 
-@media only screen and (max-width: 75em) {
+@media only screen and (max-width: 1200px) {
   .benefits {
     grid-column: 1/span 3;
   }
 }
 
-@media only screen and (max-width: 56.25em) {
+@media only screen and (max-width: 900px) {
   .explanation,
 .participation,
 .benefits,
@@ -341,21 +342,21 @@ footer a:hover {
 
 .extra1 {
   position: absolute;
-  left: 50%;
-  top: 150%;
+  z-index: 125;
   height: 2px;
-  background: linear-gradient(-45deg, rgb(95, 145, 255), rgba(0, 0, 255, 0));
+  background: linear-gradient(-45deg, rgb(175, 200, 250), rgba(0, 0, 255, 0));
   border-radius: 999px;
-  filter: drop-shadow(0 0 6px rgb(105, 155, 255));
+  filter: drop-shadow(0 0 6px rgb(175, 200, 250));
   animation: tail 3000ms ease-in-out infinite, shooting 3000ms ease-in-out infinite;
 }
 .extra1::before {
   content: "";
   position: absolute;
-  top: calc(150% - 1px);
+  top: calc(5% - 1px);
   right: 0;
+  width: 30px;
   height: 2px;
-  background: linear-gradient(-45deg, rgba(0, 0, 255, 0), rgb(95, 145, 255), rgba(0, 0, 255, 0));
+  background: linear-gradient(-45deg, rgba(0, 0, 255, 0), rgb(175, 200, 250), rgba(0, 0, 255, 0));
   transform: translateX(50%) rotateZ(45deg);
   border-radius: 100%;
   animation: shining 3000ms ease-in-out infinite;
@@ -363,174 +364,51 @@ footer a:hover {
 .extra1::after {
   content: "";
   position: absolute;
-  top: calc(150% - 1px);
+  top: calc(5% - 1px);
   right: 0;
+  width: 30px;
   height: 2px;
-  background: linear-gradient(-45deg, rgba(0, 0, 255, 0), rgb(95, 145, 255), rgba(0, 0, 255, 0));
+  background: linear-gradient(-45deg, rgba(0, 0, 255, 0), rgb(175, 200, 250), rgba(0, 0, 255, 0));
   transform: translateX(50%) rotateZ(45deg);
   border-radius: 100%;
   animation: shining 3000ms ease-in-out infinite;
-  transform: translateY(50%) rotateZ(-45deg);
+  transform: translateX(50%) rotateZ(-45deg);
 }
 .extra1:nth-child(1) {
-  top: calc(50% - -156px);
-  left: calc(50% - 201px);
-  animation-delay: 9113ms;
+  left: 35%;
+  top: 40%;
+  animation-delay: 1822ms;
+}
+@media only screen and (max-width: 900px) {
+  .extra1:nth-child(1) {
+    left: 25%;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .extra1:nth-child(1) {
+    left: 20%;
+  }
 }
 .extra1:nth-child(1)::before, .extra1:nth-child(1)::after {
-  animation-delay: 9113ms;
+  animation-delay: 1822ms;
 }
 .extra1:nth-child(2) {
-  top: calc(50% - 155px);
-  left: calc(50% - 298px);
-  animation-delay: 6873ms;
+  left: 35%;
+  top: 40%;
+  animation-delay: 7693ms;
+}
+@media only screen and (max-width: 900px) {
+  .extra1:nth-child(2) {
+    left: 25%;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .extra1:nth-child(2) {
+    left: 20%;
+  }
 }
 .extra1:nth-child(2)::before, .extra1:nth-child(2)::after {
-  animation-delay: 6873ms;
-}
-.extra1:nth-child(3) {
-  top: calc(50% - 160px);
-  left: calc(50% - 142px);
-  animation-delay: 7112ms;
-}
-.extra1:nth-child(3)::before, .extra1:nth-child(3)::after {
-  animation-delay: 7112ms;
-}
-.extra1:nth-child(4) {
-  top: calc(50% - 40px);
-  left: calc(50% - 220px);
-  animation-delay: 203ms;
-}
-.extra1:nth-child(4)::before, .extra1:nth-child(4)::after {
-  animation-delay: 203ms;
-}
-.extra1:nth-child(5) {
-  top: calc(50% - -71px);
-  left: calc(50% - 78px);
-  animation-delay: 9962ms;
-}
-.extra1:nth-child(5)::before, .extra1:nth-child(5)::after {
-  animation-delay: 9962ms;
-}
-.extra1:nth-child(6) {
-  top: calc(50% - 103px);
-  left: calc(50% - 1px);
-  animation-delay: 8133ms;
-}
-.extra1:nth-child(6)::before, .extra1:nth-child(6)::after {
-  animation-delay: 8133ms;
-}
-.extra1:nth-child(7) {
-  top: calc(50% - 1px);
-  left: calc(50% - 152px);
-  animation-delay: 1615ms;
-}
-.extra1:nth-child(7)::before, .extra1:nth-child(7)::after {
-  animation-delay: 1615ms;
-}
-.extra1:nth-child(8) {
-  top: calc(50% - -92px);
-  left: calc(50% - 82px);
-  animation-delay: 1724ms;
-}
-.extra1:nth-child(8)::before, .extra1:nth-child(8)::after {
-  animation-delay: 1724ms;
-}
-.extra1:nth-child(9) {
-  top: calc(50% - -119px);
-  left: calc(50% - 36px);
-  animation-delay: 7672ms;
-}
-.extra1:nth-child(9)::before, .extra1:nth-child(9)::after {
-  animation-delay: 7672ms;
-}
-.extra1:nth-child(10) {
-  top: calc(50% - 48px);
-  left: calc(50% - 198px);
-  animation-delay: 9995ms;
-}
-.extra1:nth-child(10)::before, .extra1:nth-child(10)::after {
-  animation-delay: 9995ms;
-}
-.extra1:nth-child(11) {
-  top: calc(50% - 171px);
-  left: calc(50% - 200px);
-  animation-delay: 7050ms;
-}
-.extra1:nth-child(11)::before, .extra1:nth-child(11)::after {
-  animation-delay: 7050ms;
-}
-.extra1:nth-child(12) {
-  top: calc(50% - 103px);
-  left: calc(50% - 51px);
-  animation-delay: 9322ms;
-}
-.extra1:nth-child(12)::before, .extra1:nth-child(12)::after {
-  animation-delay: 9322ms;
-}
-.extra1:nth-child(13) {
-  top: calc(50% - -33px);
-  left: calc(50% - 14px);
-  animation-delay: 7866ms;
-}
-.extra1:nth-child(13)::before, .extra1:nth-child(13)::after {
-  animation-delay: 7866ms;
-}
-.extra1:nth-child(14) {
-  top: calc(50% - -116px);
-  left: calc(50% - 106px);
-  animation-delay: 434ms;
-}
-.extra1:nth-child(14)::before, .extra1:nth-child(14)::after {
-  animation-delay: 434ms;
-}
-.extra1:nth-child(15) {
-  top: calc(50% - 174px);
-  left: calc(50% - 205px);
-  animation-delay: 7510ms;
-}
-.extra1:nth-child(15)::before, .extra1:nth-child(15)::after {
-  animation-delay: 7510ms;
-}
-.extra1:nth-child(16) {
-  top: calc(50% - 191px);
-  left: calc(50% - 168px);
-  animation-delay: 1015ms;
-}
-.extra1:nth-child(16)::before, .extra1:nth-child(16)::after {
-  animation-delay: 1015ms;
-}
-.extra1:nth-child(17) {
-  top: calc(50% - 106px);
-  left: calc(50% - 232px);
-  animation-delay: 9692ms;
-}
-.extra1:nth-child(17)::before, .extra1:nth-child(17)::after {
-  animation-delay: 9692ms;
-}
-.extra1:nth-child(18) {
-  top: calc(50% - -173px);
-  left: calc(50% - 27px);
-  animation-delay: 499ms;
-}
-.extra1:nth-child(18)::before, .extra1:nth-child(18)::after {
-  animation-delay: 499ms;
-}
-.extra1:nth-child(19) {
-  top: calc(50% - -156px);
-  left: calc(50% - 143px);
-  animation-delay: 1975ms;
-}
-.extra1:nth-child(19)::before, .extra1:nth-child(19)::after {
-  animation-delay: 1975ms;
-}
-.extra1:nth-child(20) {
-  top: calc(50% - -170px);
-  left: calc(50% - 279px);
-  animation-delay: 9926ms;
-}
-.extra1:nth-child(20)::before, .extra1:nth-child(20)::after {
-  animation-delay: 9926ms;
+  animation-delay: 7693ms;
 }
 
 @keyframes tail {
@@ -557,18 +435,10 @@ footer a:hover {
 }
 @keyframes shooting {
   0% {
-    transform: translateY(0);
+    transform: translateX(0);
   }
   100% {
-    transform: translateY(300px);
-  }
-}
-@keyframes sky {
-  0% {
-    transform: rotate(45deg);
-  }
-  100% {
-    transform: rotate(405deg);
+    transform: translateX(300px);
   }
 }
 .main {
@@ -580,28 +450,34 @@ footer a:hover {
   background-image: linear-gradient(to right bottom, rgba(180, 130, 172, 0.6), rgba(165, 0, 1, 0.5)), url(../images/bg-planet-2.jpg);
   background-size: 100%;
   background-attachment: fixed;
-  padding: 22rem 15% 0 15%;
+  padding: 27rem 15% 0 15%;
   position: relative;
   z-index: 4;
 }
-@media only screen and (max-width: 75em) {
+@media only screen and (max-width: 1200px) {
   .main {
     background-size: cover;
     background-position: bottom;
     position: relative;
     grid-template-columns: 1fr 1fr;
+    padding-top: 31rem;
   }
 }
-@media only screen and (max-width: 56.25em) {
+@media only screen and (max-width: 900px) {
   .main {
     grid-template-columns: 1fr;
     column-gap: 0;
-    padding-top: 28rem;
+    padding-top: 33rem;
   }
 }
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 900px) {
   .main {
     padding-top: 45rem;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .main {
+    padding-top: 50rem;
   }
 }
 
@@ -628,13 +504,19 @@ footer a:hover {
 .wrapper .zen-resources h3 {
   color: yellow;
 }
-@media only screen and (max-width: 75em) {
+@media only screen and (max-width: 1200px) {
   .wrapper .zen-resources {
-    top: 8%;
-    left: 19%;
+    top: 22%;
+    left: 15%;
   }
 }
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 900px) {
+  .wrapper .zen-resources {
+    top: 15%;
+    left: 15%;
+  }
+}
+@media only screen and (max-width: 550px) {
   .wrapper .zen-resources {
     top: 10%;
     left: 30%;
@@ -654,18 +536,18 @@ footer a:hover {
 .wrapper a:hover {
   color: #125da9;
 }
-@media only screen and (max-width: 75em) {
+@media only screen and (max-width: 1200px) {
   .wrapper {
     left: 55%;
   }
 }
-@media only screen and (max-width: 56.25em) {
+@media only screen and (max-width: 900px) {
   .wrapper {
     top: 50%;
     left: 30%;
   }
 }
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 550px) {
   .wrapper:not(:last-child) {
     top: 30%;
     left: -15%;
@@ -677,6 +559,10 @@ footer a:hover {
   .wrapper:not(:last-child):hover {
     transform: scale(1.1);
   }
+}
+
+.summary {
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=style.css.map */
