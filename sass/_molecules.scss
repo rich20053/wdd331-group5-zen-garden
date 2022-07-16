@@ -106,9 +106,6 @@ header {
     grid-column: 1 /span 3;
 }
 
-
-
-
 .preamble,
 .explanation,
 .participation,
@@ -144,8 +141,9 @@ footer {
 
 footer {
     grid-column: 1 / span 3;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     text-align: center;
     border-radius: .8rem .8rem 0 0;
     margin-top: 5rem;
@@ -155,6 +153,9 @@ footer {
         color: $color-link;
         &:hover{
             text-decoration: underline;
+        }
+        @include responsive(tab-port) {
+          font-size: 1.6rem;
         }
     }
 }
