@@ -66,7 +66,7 @@ a {
 .extra2 {
   content: "X";
   width: 30%;
-  background-image: url(../images/shuttle.png);
+  background-image: url(/images/shuttle.png);
   height: 95%;
   background-size: contain;
   background-repeat: no-repeat;
@@ -95,7 +95,7 @@ a {
 }
 
 .extra3 {
-  background-image: radial-gradient(ellipse at center, rgba(180, 130, 172, 0.3) 0%, rgba(165, 0, 1, 0.3) 70%, rgba(0, 128, 172, 0) 70.3%), url(..//images/blue-planet.png);
+  background-image: radial-gradient(ellipse at center, rgba(180, 130, 172, 0.3) 0%, rgba(165, 0, 1, 0.3) 70%, rgba(0, 128, 172, 0) 70.3%), url(/images/blue-planet.png);
   background-size: contain;
   position: fixed;
   width: 30rem;
@@ -111,14 +111,15 @@ a {
 }
 @media only screen and (max-width: 550px) {
   .extra3 {
-    top: -3%;
+    top: -9%;
+    left: -20%;
     transform: scale(0.75);
   }
 }
 
 header {
   height: 100vh;
-  background-image: linear-gradient(to right bottom, rgba(18, 93, 169, 0.7), rgba(77, 28, 113, 0.7)), url(../images/bg-space-1.jpg);
+  background-image: linear-gradient(to right bottom, rgba(18, 93, 169, 0.7), rgba(77, 28, 113, 0.7)), url(/images/bg-space-1.jpg);
   background-size: cover;
   background-position: top;
   position: relative;
@@ -150,7 +151,7 @@ header h2 {
 
 .summary {
   font-size: 1.6rem;
-  background-image: url(../images/bg-space-plain.jpg);
+  background-image: url(/images/bg-space-plain.jpg);
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
@@ -161,7 +162,7 @@ header h2 {
   z-index: 1;
 }
 .summary p:not(:last-child) {
-  background-image: url(../images/brown-moon.png);
+  background-image: url(/images/brown-moon.png);
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
@@ -377,7 +378,7 @@ footer a:hover {
 .extra1:nth-child(1) {
   left: 35%;
   top: 40%;
-  animation-delay: 1822ms;
+  animation-delay: 3692ms;
 }
 @media only screen and (max-width: 900px) {
   .extra1:nth-child(1) {
@@ -390,12 +391,12 @@ footer a:hover {
   }
 }
 .extra1:nth-child(1)::before, .extra1:nth-child(1)::after {
-  animation-delay: 1822ms;
+  animation-delay: 3692ms;
 }
 .extra1:nth-child(2) {
   left: 35%;
   top: 40%;
-  animation-delay: 7693ms;
+  animation-delay: 8407ms;
 }
 @media only screen and (max-width: 900px) {
   .extra1:nth-child(2) {
@@ -408,7 +409,7 @@ footer a:hover {
   }
 }
 .extra1:nth-child(2)::before, .extra1:nth-child(2)::after {
-  animation-delay: 7693ms;
+  animation-delay: 8407ms;
 }
 
 @keyframes tail {
@@ -441,13 +442,100 @@ footer a:hover {
     transform: translateX(300px);
   }
 }
+.wrapper {
+  background-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.3) 70%, rgba(0, 128, 172, 0) 70.3%), url(/images/desert-planet.png);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 45rem;
+  height: 45rem;
+  position: fixed;
+  z-index: 3;
+  top: 40%;
+  left: 70%;
+  list-style-type: none;
+  text-align: left;
+  padding: 13rem 0 0 13rem;
+}
+.wrapper .zen-resources {
+  position: fixed;
+  top: 24%;
+  left: 12.5%;
+}
+.wrapper .zen-resources h3 {
+  color: yellow;
+}
+@media only screen and (max-width: 1200px) {
+  .wrapper .zen-resources {
+    top: 23%;
+    left: 15%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .wrapper .zen-resources {
+    top: 10%;
+    left: 16%;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .wrapper .zen-resources {
+    top: 0%;
+    left: 0%;
+    width: 15rem;
+  }
+  .wrapper .zen-resources:not(:hover) {
+    display: none;
+  }
+  .wrapper .zen-resources:hover {
+    transform: scale(1);
+  }
+}
+.wrapper h3 {
+  font-size: 2.5rem;
+}
+.wrapper ul {
+  list-style: none;
+  color: #f3f1f4;
+  font-size: 1.6rem;
+}
+.wrapper a {
+  color: white;
+}
+.wrapper a:hover {
+  color: #125da9;
+}
+@media only screen and (max-width: 1200px) {
+  .wrapper {
+    left: 55%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .wrapper {
+    top: 50%;
+    left: 30%;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .wrapper {
+    top: 30%;
+    left: -15%;
+    transition: all 1s;
+  }
+  .wrapper:not(:hover) {
+    transform: scale(0.25);
+  }
+  .wrapper:hover {
+    transform: scale(1.1);
+  }
+}
+
 .main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 1.6rem;
   row-gap: 1.6rem;
   border-radius: 0.5rem;
-  background-image: linear-gradient(to right bottom, rgba(180, 130, 172, 0.6), rgba(165, 0, 1, 0.5)), url(../images/bg-planet-2.jpg);
+  background-image: linear-gradient(to right bottom, rgba(180, 130, 172, 0.6), rgba(165, 0, 1, 0.5)), url(/images/bg-planet-2.jpg);
   background-size: 100%;
   background-attachment: fixed;
   padding: 27rem 15% 0 15%;
@@ -477,87 +565,7 @@ footer a:hover {
 }
 @media only screen and (max-width: 550px) {
   .main {
-    padding-top: 50rem;
-  }
-}
-
-.wrapper {
-  background-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.3) 70%, rgba(0, 128, 172, 0) 70.3%), url(../images/desert-planet.png);
-  background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
-  width: 45rem;
-  height: 45rem;
-  position: fixed;
-  z-index: 3;
-  top: 40%;
-  left: 70%;
-  list-style-type: none;
-  text-align: left;
-  padding: 13rem 0 0 13rem;
-}
-.wrapper .zen-resources {
-  position: fixed;
-  top: 25%;
-  left: 14%;
-}
-.wrapper .zen-resources h3 {
-  color: yellow;
-}
-@media only screen and (max-width: 1200px) {
-  .wrapper .zen-resources {
-    top: 22%;
-    left: 15%;
-  }
-}
-@media only screen and (max-width: 900px) {
-  .wrapper .zen-resources {
-    top: 15%;
-    left: 15%;
-  }
-}
-@media only screen and (max-width: 550px) {
-  .wrapper .zen-resources {
-    top: 10%;
-    left: 30%;
-  }
-}
-.wrapper h3 {
-  font-size: 2.5rem;
-}
-.wrapper ul {
-  list-style: none;
-  color: #f3f1f4;
-  font-size: 1.6rem;
-}
-.wrapper a {
-  color: white;
-}
-.wrapper a:hover {
-  color: #125da9;
-}
-@media only screen and (max-width: 1200px) {
-  .wrapper {
-    left: 55%;
-  }
-}
-@media only screen and (max-width: 900px) {
-  .wrapper {
-    top: 50%;
-    left: 30%;
-  }
-}
-@media only screen and (max-width: 550px) {
-  .wrapper:not(:last-child) {
-    top: 30%;
-    left: -15%;
-    transition: all 1s;
-  }
-  .wrapper:not(:last-child):not(:hover) {
-    transform: scale(0.25);
-  }
-  .wrapper:not(:last-child):hover {
-    transform: scale(1.1);
+    padding-top: 66rem;
   }
 }
 
