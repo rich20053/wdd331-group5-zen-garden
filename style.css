@@ -66,7 +66,7 @@ a {
 .extra2 {
   content: "X";
   width: 30%;
-  background-image: url(/images/shuttle.png);
+  background-image: url(./images/shuttle.png);
   height: 95%;
   background-size: contain;
   background-repeat: no-repeat;
@@ -95,7 +95,7 @@ a {
 }
 
 .extra3 {
-  background-image: radial-gradient(ellipse at center, rgba(180, 130, 172, 0.3) 0%, rgba(165, 0, 1, 0.3) 70%, rgba(0, 128, 172, 0) 70.3%), url(/images/blue-planet.png);
+  background-image: radial-gradient(ellipse at center, rgba(180, 130, 172, 0.3) 0%, rgba(165, 0, 1, 0.3) 70%, rgba(0, 128, 172, 0) 70.3%), url(./images/blue-planet.png);
   background-size: contain;
   position: fixed;
   width: 30rem;
@@ -119,7 +119,7 @@ a {
 
 header {
   height: 100vh;
-  background-image: linear-gradient(to right bottom, rgba(18, 93, 169, 0.7), rgba(77, 28, 113, 0.7)), url(/images/bg-space-1.jpg);
+  background-image: linear-gradient(to right bottom, rgba(18, 93, 169, 0.7), rgba(77, 28, 113, 0.7)), url(./images/bg-space-1.jpg);
   background-size: cover;
   background-position: top;
   position: relative;
@@ -151,7 +151,7 @@ header h2 {
 
 .summary {
   font-size: 1.6rem;
-  background-image: url(/images/bg-space-plain.jpg);
+  background-image: url(./images/bg-space-plain.jpg);
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
@@ -162,7 +162,7 @@ header h2 {
   z-index: 1;
 }
 .summary p:not(:last-child) {
-  background-image: url(/images/brown-moon.png);
+  background-image: url(./images/brown-moon.png);
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
@@ -378,7 +378,7 @@ footer a:hover {
 .extra1:nth-child(1) {
   left: 35%;
   top: 40%;
-  animation-delay: 3692ms;
+  animation-delay: 5445ms;
 }
 @media only screen and (max-width: 900px) {
   .extra1:nth-child(1) {
@@ -391,12 +391,12 @@ footer a:hover {
   }
 }
 .extra1:nth-child(1)::before, .extra1:nth-child(1)::after {
-  animation-delay: 3692ms;
+  animation-delay: 5445ms;
 }
 .extra1:nth-child(2) {
   left: 35%;
   top: 40%;
-  animation-delay: 8407ms;
+  animation-delay: 6182ms;
 }
 @media only screen and (max-width: 900px) {
   .extra1:nth-child(2) {
@@ -409,7 +409,7 @@ footer a:hover {
   }
 }
 .extra1:nth-child(2)::before, .extra1:nth-child(2)::after {
-  animation-delay: 8407ms;
+  animation-delay: 6182ms;
 }
 
 @keyframes tail {
@@ -443,7 +443,7 @@ footer a:hover {
   }
 }
 .wrapper {
-  background-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.3) 70%, rgba(0, 128, 172, 0) 70.3%), url(/images/desert-planet.png);
+  background-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.3) 70%, rgba(0, 128, 172, 0) 70.3%), url(./images/desert-planet.png);
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
@@ -483,12 +483,6 @@ footer a:hover {
     left: 0%;
     width: 15rem;
   }
-  .wrapper .zen-resources:not(:hover) {
-    display: none;
-  }
-  .wrapper .zen-resources:hover {
-    transform: scale(1);
-  }
 }
 .wrapper h3 {
   font-size: 2.5rem;
@@ -502,7 +496,7 @@ footer a:hover {
   color: white;
 }
 .wrapper a:hover {
-  color: #125da9;
+  color: #B70201;
 }
 @media only screen and (max-width: 1200px) {
   .wrapper {
@@ -517,15 +511,44 @@ footer a:hover {
 }
 @media only screen and (max-width: 550px) {
   .wrapper {
-    top: 30%;
+    top: 60%;
+    left: 0%;
+    width: 15rem;
+    height: 15rem;
+    padding: 0;
+  }
+  .wrapper h3 {
+    color: yellow;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .design-selection {
+    transform: scale(0.3);
+    padding: 0;
+    position: fixed;
+    top: 50%;
     left: -15%;
-    transition: all 1s;
+    width: 25rem;
+    transition: all 0.3s;
   }
-  .wrapper:not(:hover) {
-    transform: scale(0.25);
+  .design-selection:hover {
+    transform: scale(0.9) translate(20%, -20%);
+    z-index: 10;
+    background-color: black;
   }
-  .wrapper:hover {
-    transform: scale(1.1);
+}
+
+@media only screen and (max-width: 550px) {
+  .design-archives {
+    transform: scale(0.6);
+    top: 80%;
+    left: -5%;
+    padding: 0;
+    width: 25rem;
+    transition: all 0.3s;
+    background-color: black;
+    position: fixed;
   }
 }
 
@@ -535,7 +558,7 @@ footer a:hover {
   column-gap: 1.6rem;
   row-gap: 1.6rem;
   border-radius: 0.5rem;
-  background-image: linear-gradient(to right bottom, rgba(180, 130, 172, 0.6), rgba(165, 0, 1, 0.5)), url(/images/bg-planet-2.jpg);
+  background-image: linear-gradient(to right bottom, rgba(180, 130, 172, 0.6), rgba(165, 0, 1, 0.5)), url(./images/bg-planet-2.jpg);
   background-size: 100%;
   background-attachment: fixed;
   padding: 27rem 15% 0 15%;

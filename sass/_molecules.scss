@@ -3,7 +3,7 @@
 header {
     height: 100vh;
     background-image: linear-gradient(to right bottom, rgba($color-blue,0.7), rgba($color-purple, 0.7)),
-    url(/images/bg-space-1.jpg);
+    url(./images/bg-space-1.jpg);
     background-size: cover;
     background-position: top;
     position: relative;
@@ -33,7 +33,7 @@ header {
 
 .summary {
    font-size: 1.6rem;
-   background-image: url(/images/bg-space-plain.jpg);
+   background-image: url(./images/bg-space-plain.jpg);
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
@@ -43,7 +43,7 @@ header {
     margin-top: -20rem;
     z-index: 1;
     & p:not(:last-child) {
-        background-image: url(/images/brown-moon.png);
+        background-image: url(./images/brown-moon.png);
         background-size: contain;
         background-position: center center;
         background-repeat: no-repeat;
@@ -302,7 +302,7 @@ $shooting-time: 3000ms;
        rgba($color-black, .2) 0%,
        rgba($color-black, .3) 70%,
        rgba(0, 128, 172, 0) 70.3%
-     ), url(/images/desert-planet.png);
+     ), url(./images/desert-planet.png);
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
@@ -334,12 +334,6 @@ $shooting-time: 3000ms;
              top: 0%;
              left: 0%;
              width: 15rem;
-             &:not(:hover) {
-              display: none;
-          }
-          &:hover {
-              transform: scale(1);
-          }
          }
        }
     & h3 {
@@ -353,7 +347,7 @@ $shooting-time: 3000ms;
     & a {
        color: white;
        &:hover {
-          color: $color-blue;
+          color: $color-link;
        }
     }
     @include responsive(tab-land) {
@@ -364,14 +358,43 @@ $shooting-time: 3000ms;
        left: 30%;
    }
    @include responsive(phone) {
-       top: 30%;
-       left: -15%;
-       transition: all 1s;
-   &:not(:hover) {
-       transform: scale(.25);
+       top: 60%;
+       left: -0%;
+       width: 15rem;
+      height: 15rem;
+      padding: 0;
+      & h3 {
+        color: $header-font-color;
+      }
+      }
    }
-   &:hover {
-       transform: scale(1.1);
+
+.design-selection {
+  @include responsive(phone) {
+    transform: scale(.3);
+    padding: 0;
+    position: fixed;
+    top: 50%;
+    left: -15%;
+    width: 25rem;
+    transition: all .3s;
+    &:hover {
+      transform: scale(.9) translate(20%,-20%);
+      z-index: 10;
+      background-color: black;
+    }
    }
+}
+
+.design-archives {
+  @include responsive(phone) {
+    transform: scale(.6);
+    top: 80%;
+    left: -5%;
+    padding: 0;
+    width: 25rem;
+    transition: all .3s;
+    background-color: black;
+    position: fixed;
    }
 }
