@@ -41,21 +41,6 @@ h2 {
   letter-spacing: 2.03rem;
   font-family: "Kdam Thmor Pro", sans-serif;
 }
-h2 abbr {
-  --b: 0.1em;
-  /* the thickness of the line */
-  text-decoration: none;
-  padding-block: var(--b);
-  background: linear-gradient(#d7b22f 50%, #000000 0) 0% calc(100% - var(--_p, 0%))/100% 200%, linear-gradient(#d7b22f 0 0) 0% var(--_p, 0%)/var(--_p, 0%) var(--b) no-repeat;
-  -webkit-background-clip: text, padding-box;
-  background-clip: text, padding-box;
-  transition: 0.3s var(--_s, 0s) linear, background-size 0.3s calc(0.3s - var(--_s, 0s));
-}
-h2 abbr:hover {
-  --_p:100%;
-  --_s: .3s;
-  color: #d7b22f;
-}
 
 a {
   text-decoration: none;
@@ -295,7 +280,7 @@ footer p:not(:last-child) {
 footer {
   grid-column: 1/span 3;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   text-align: center;
   border-radius: 0.8rem 0.8rem 0 0;
   margin-top: 5rem;
@@ -378,7 +363,7 @@ footer a:hover {
 .extra1:nth-child(1) {
   left: 35%;
   top: 40%;
-  animation-delay: 5445ms;
+  animation-delay: 6330ms;
 }
 @media only screen and (max-width: 900px) {
   .extra1:nth-child(1) {
@@ -391,12 +376,12 @@ footer a:hover {
   }
 }
 .extra1:nth-child(1)::before, .extra1:nth-child(1)::after {
-  animation-delay: 5445ms;
+  animation-delay: 6330ms;
 }
 .extra1:nth-child(2) {
   left: 35%;
   top: 40%;
-  animation-delay: 6182ms;
+  animation-delay: 2249ms;
 }
 @media only screen and (max-width: 900px) {
   .extra1:nth-child(2) {
@@ -409,7 +394,7 @@ footer a:hover {
   }
 }
 .extra1:nth-child(2)::before, .extra1:nth-child(2)::after {
-  animation-delay: 6182ms;
+  animation-delay: 2249ms;
 }
 
 @keyframes tail {

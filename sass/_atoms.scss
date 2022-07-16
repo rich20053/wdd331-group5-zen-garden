@@ -44,24 +44,6 @@ h2 {
     font-size: 2rem;
     letter-spacing: 2.03rem;
     font-family: $header-font;
-    & abbr{
-    --b: 0.1em;   /* the thickness of the line */
-
-    text-decoration: none;
-    padding-block: var(--b);
-    background: 
-    linear-gradient($color-yellow 50%,$color-black 0) 0% calc(100% - var(--_p,0%))/100% 200%,
-    linear-gradient($color-yellow 0 0) 0% var(--_p,0%)/var(--_p,0%) var(--b) no-repeat;
-    -webkit-background-clip: text,padding-box;
-    background-clip: text,padding-box;
-    transition: .3s var(--_s,0s) linear,background-size .3s calc(.3s - var(--_s,0s));
-    
-    &:hover {
-        --_p:100%;
-        --_s: .3s;
-        color: $color-yellow;
-    }
-}
 }
 
 a {
